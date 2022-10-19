@@ -11,7 +11,9 @@ const computerPlay = () => {
     }
 }
 const playerSelection = () => {
-    const playerChoose = prompt("Enter rock, paper or scissors: ").toLowerCase(); 
+    const pChoose = prompt("Enter rock, paper or scissors: "); 
+    const playerChoose = pChoose.toLowerCase();
+    
 
     if(playerChoose !== 'rock' && playerChoose !== 'scissors' && playerChoose !== 'paper'){
         alert("You choose bad input, try again!"); 
@@ -40,7 +42,7 @@ let computerWin = 0;
 let gameTied = 0;
 function game() {
     for (let i = 0; i < 5; i++) {
-        const player = playerSelection(); 
+        const player = playerSelection();
         const computer = computerPlay();
         console.log(`Computer choose: ${computer}`);
         console.log(`Player choose: ${player}`);
